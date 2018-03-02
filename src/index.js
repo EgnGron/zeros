@@ -19,22 +19,3 @@ var result = 0
   }
 return result
 }
-
-
-function example1() {
-  var result = 0
-
-  if (number > 1 && number < Math.pow(10,8)) {
-    const step = 5
-    var index = step
-
-    do {
-      value = number/index    
-      result += value >> 0.5
-      index = index * step      
-    } 
-    while (value >= 1) 
-  }
-
-  return result
-}

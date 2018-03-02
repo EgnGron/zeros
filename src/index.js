@@ -11,19 +11,30 @@ module.exports = function getZerosCount(number) {
 // 5! = 120 -> 1 
 
 var result = 0
-
-if (number > 1 && number < Math.pow(10,8)) {
-  const step = 5
-  var index = step
-
-  do {
-    value = number/index    
-    result += value >> 0.5
-    index = index * step      
-  } 
-  while (value >= 1) 
-
+  if (number > 1 && number < Math.pow(10,8)) {
+      while(number > 0) {
+        number = (number/5)>>0.5;
+        result += number;
+      }
+  }
+return result
 }
 
-return result
+
+function example1() {
+  var result = 0
+
+  if (number > 1 && number < Math.pow(10,8)) {
+    const step = 5
+    var index = step
+
+    do {
+      value = number/index    
+      result += value >> 0.5
+      index = index * step      
+    } 
+    while (value >= 1) 
+  }
+
+  return result
 }
